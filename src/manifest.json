@@ -1,0 +1,17 @@
+{  
+  "manifest_version" : 2,
+  "name": "clean_chrome_homepage",  
+  "version": "1.0.0",  
+  "description": "clean chrome homepage to make us happy",  
+  "content_scripts":[
+      {
+        "matches": ["*://*/_/chrome/newtab*"],
+        "js": ["background.js"],
+        "run_at": "document_idle"
+    }
+  ],
+  "icons": { "16":"cleanhomepage.png", "48":"cleanhomepage.png", "128":"cleanhomepage.png"},
+  "browser_action": {  
+    "default_icon": "cleanhomepage.png"
+  }  
+} 
